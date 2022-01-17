@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/nasa-apod-gallery/static/css/main.1edf472b.css",
-    "main.js": "/nasa-apod-gallery/static/js/main.1f12a367.js",
+    "main.js": "/nasa-apod-gallery/static/js/main.16df9ea8.js",
     "static/js/787.2370f01e.chunk.js": "/nasa-apod-gallery/static/js/787.2370f01e.chunk.js",
     "static/media/landing.jpg": "/nasa-apod-gallery/static/media/landing.5c8348b0e976d489777a.jpg",
     "index.html": "/nasa-apod-gallery/index.html",
     "main.1edf472b.css.map": "/nasa-apod-gallery/static/css/main.1edf472b.css.map",
-    "main.1f12a367.js.map": "/nasa-apod-gallery/static/js/main.1f12a367.js.map",
+    "main.16df9ea8.js.map": "/nasa-apod-gallery/static/js/main.16df9ea8.js.map",
     "787.2370f01e.chunk.js.map": "/nasa-apod-gallery/static/js/787.2370f01e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1edf472b.css",
-    "static/js/main.1f12a367.js"
+    "static/js/main.16df9ea8.js"
   ]
 }

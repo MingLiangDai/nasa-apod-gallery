@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Typography, Box, Grid, TextField } from "@mui/material";
 import GalleryGrid from "./GalleryGrid";
 import landingImg from "../assets/images/landing.jpg";
@@ -7,7 +7,14 @@ import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
 
 const GalleryPage = () => {
-  const [dateTaken, setDateTaken] = useState(new Date());
+  const [dateTaken, setDateTaken] = useState(
+    (() => {
+      // self calling func
+      const date = new Date();
+      date.setDate(date.getDate() - 7);
+      return date;
+    })()
+  );
 
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
