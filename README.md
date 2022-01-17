@@ -19,3 +19,5 @@ See a demo of this project at https://mingliangdai.github.io/nasa-apod-gallery/
 
 1. `git clone` the repository
 2. run `yarn start`
+3. run `cd nasa-apod-gallery`
+4. run `yarn install`
