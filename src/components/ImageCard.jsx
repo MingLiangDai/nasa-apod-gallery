@@ -41,12 +41,16 @@ const descModalStyle = {
   overflowY: "scroll",
 };
 
+const defaultShadow = 4;
+const hoverShadow = 12;
+
 const ImageCard = ({ image, heightOverride, likeClicked }) => {
   heightOverride = heightOverride || 700;
   const [showImgPrompt, setShowImgPrompt] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [showDescModal, setShowDescModal] = useState(false);
   const [showSnackbar, setShowSnackbar] = useState(false);
+  const [shadow, setShadow] = useState(defaultShadow);
 
   const handleCopy = () => {
     navigator.clipboard.writeText(image.url);
@@ -89,7 +93,15 @@ const ImageCard = ({ image, heightOverride, likeClicked }) => {
         </Card>
       </Modal>
 
-      <Card sx={{ height: heightOverride, position: "relative" }}>
+      <Card
+        sx={{ height: heightOverride, position: "relative", boxShadow: shadow }}
+        onMouseOver={() => {
+          setShadow(hoverShadow);
+        }}
+        onMouseOut={() => {
+          setShadow(defaultShadow);
+        }}
+      >
         <CardActionArea
           onMouseOver={() => setShowImgPrompt(true)}
           onMouseLeave={() => setShowImgPrompt(false)}

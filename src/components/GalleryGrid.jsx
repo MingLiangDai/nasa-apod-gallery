@@ -1,7 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { Grid, Alert, Box, LinearProgress } from "@mui/material";
+import { Grid, Alert, Box, LinearProgress, Modal } from "@mui/material";
 import axios from "axios";
 import ImageCard from "./ImageCard";
+
+const progressModalStyle = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: "80%",
+  maxWidth: "1000px",
+};
 
 const GalleryGrid = ({ dateTaken }) => {
   const [images, setImages] = useState([]);
@@ -64,20 +73,20 @@ const GalleryGrid = ({ dateTaken }) => {
   return (
     <React.Fragment>
       {loading ? (
-        <Grid pt={2} px={2}>
-          <Box sx={{ width: "100%" }}>
+        <Modal open>
+          <Box sx={progressModalStyle}>
             <LinearProgress />
           </Box>
-        </Grid>
+        </Modal>
       ) : (
         fetchError && (
-          <Grid pt={2} px={2}>
+          <Grid pt={2}>
             <Alert severity="error">{fetchError}</Alert>
           </Grid>
         )
       )}
 
-      <Grid pt={2} px={2} spacing={2} container>
+      <Grid pt={2} spacing={2} container>
         {images.map((image, index) => (
           <Grid item md={6} lg={4} key={index}>
             <ImageCard
