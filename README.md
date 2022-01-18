@@ -18,6 +18,6 @@ See a demo of this project at https://mingliangdai.github.io/nasa-apod-gallery/
 ## How to clone and run
 
 1. `git clone` the repository
-2. run `yarn start`
-3. run `cd nasa-apod-gallery`
-4. run `yarn install`
+2. run `cd nasa-apod-gallery`
+3. run `yarn`
+4. run `yarn start`
